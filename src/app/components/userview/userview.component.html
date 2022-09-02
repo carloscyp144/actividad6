@@ -1,0 +1,22 @@
+<section class="container mt-5">
+    <div class="p-4 border-4">
+        <div class="row">
+            <figure class="col-12 col-md-4">
+                <img class="img" class="rounded-circle" [src]="myUser.image" [alt]="myUser.first_name">
+            </figure>
+            <div class="col-12 col-md-8">
+                <h2 class="mb-3">{{myUser.first_name}}</h2>
+                <h2 class="mb-3">{{myUser.last_name}}</h2>
+                <hr>
+                <p><strong>Email: </strong>{{myUser.email}}</p>
+                <div class="pt-5">
+                    <small>
+                        <button class="btn btn-lg active" (click)="borrar_usuario()">Eliminar</button>
+                        <button class="btn btn-lg active" [routerLink]="['/updateuser',myUser.id]">Actualizar</button>
+                        <button class="btn btn-lg active" [routerLink]="['/home']">Volver a listado</button>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

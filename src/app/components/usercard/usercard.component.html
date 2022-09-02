@@ -1,0 +1,15 @@
+<div class="card text-center h-100">
+    <img [src]="myUser.image" class="container rounded-circle mt-4 mb-4"  [alt]="myUser.first_name">
+    
+    <div class="card-body">
+        <h5 class="card-title">{{myUser.first_name}} {{myUser.last_name}}</h5>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">
+            <button class="btn btn-secundary btn-sm" [routerLink]="['/user',myUser.id]"><div><i class="fa-solid fa-search"></i></div>Ver detalle</button>
+            <button class="btn btn-secundary btn-sm" [routerLink]="['/updateuser',myUser.id]"><div><i class="bi-solid bi-arrow-repeat"></i></div>Actualizar</button>
+            <button class="btn btn-secundary btn-sm" (click)="borrar_usuario()"><div><i class="fa-solid fa-trash-can"></i></div>Borrar</button>
+        </small>
+    </div>
+</div>
+<div></div>
